@@ -4,6 +4,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+
+# dendencias 
+
+npm i axios mongoose typescript
+npm install next react react-dom
+npm install react-toastify
+
 ```bash
 npm run dev
 # or
