@@ -1,5 +1,7 @@
 import { Card } from "@/components/card/card";
 import { useState } from "react";
+
+
 // import { CgAirplane } from "react-icons/cg";
 
 const aves = [
@@ -38,6 +40,7 @@ export default function Dashboard() {
         {/* <h1 className="heading">Bienvenido al Dashboard <CgAirplane /></h1> */}
       </div>
       <div>
+        <h2>Bienvenido a tu dashboard</h2>
         <label> Nombre</label>
         <input onChange={(e)=> {
           setInputName(e.target.value)
