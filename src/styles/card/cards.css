@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 1rem;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(91, 192, 190, 0.6);
+}
+
+/* 🟩 Variantes de color */
+.card-green {
+  border-left: 5px solid #5bc0be;
+}
+
+.card-white {
+  border-left: 5px solid #ffffff;
+}
+
+.card-black {
+  border-left: 5px solid #0b132b;
+}
+
+.card__leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__leftSide--title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5bc0be;
+}
+
+.card__leftSide--subtitle {
+  font-size: 0.9rem;
+  color: #d3d3d3;
+}
+
+.card__rightSide--image {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}

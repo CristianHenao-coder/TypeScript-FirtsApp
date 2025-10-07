@@ -1,0 +1,77 @@
+/* src/styles/login.css */
+
+.box {
+  background: rgba(255, 255, 255, 0.9);
+  width: 380px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #007b8f;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.3rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #0097a7;
+  box-shadow: 0 0 5px rgba(0, 151, 167, 0.3);
+}
+
+.btn {
+  background: #0097a7;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.save {
+  background: #28a745;
+  
+}
+
+.btn.api {
+  background: #6f42c1;
+   width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #007b8f;
+}
+
+.top {
+  margin-top: 1rem;
+}

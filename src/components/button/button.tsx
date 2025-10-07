@@ -2,8 +2,8 @@
 
 interface mibuttonprope {
 
-    text: string,
-    icon: string,
+    text?: string,
+    icon?: string,
     disabled?: boolean,
     loading?: boolean,
     Click?: ()=> void

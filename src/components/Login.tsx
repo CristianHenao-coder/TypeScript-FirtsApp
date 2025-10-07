@@ -1,10 +1,12 @@
 // /src/components/Login.tsx
+"use client";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { Userio, notificacion } from "@/dto/helpers/utils";
+import { Userio, notificacion } from "../dto/helpers/utils";
 import { MiButton } from './button/button';
 import handler from '../pages/api/hello';
-import { Usuario } from '../dto/helpers/product';
+import { getProperties } from "@/services/properties";
+import React, { useEffect } from "react";
 
 export default function Login() {
   const [usuario, setUsuario] = useState("");
@@ -27,13 +29,37 @@ export default function Login() {
   
   const [loader, setloader] = useState(false);
   
-  const handlerClick = () =>{
+  const handleLoaderClick = () =>{
     setloader(true);
     setTimeout (()=>{
       setloader(false);
     }, 3000);
-  }
+  };
+
+  //Boton api handleClick
+
+    const [dataProperties, setDataProperties] = useState([]);
+
+     useEffect(()=>{
+    const fechData = async()=> {
+      const response =await getProperties()
+      setDataProperties(response);
+      console.log("se ejecuto soy el crack UseEffect")
+    }
+    fechData()
+  },[])
+
+    const handleApiClick = async ()=> {
+      const response = await getProperties();
+      console.log (response);
+      setDataProperties(response)
+    }
+
   
+  console.log(dataProperties)
+  
+
+
   return (
     <div className="box">
       <h1 className="title">Login</h1>
@@ -56,8 +82,13 @@ export default function Login() {
       />
       <button className="btn top" onClick={verificar}>
         Ingresar
-      </button>
-      <MiButton text ={"guardar"} icon={"***"} loading={loader} Click={handlerClick}/>
+      </button >
+
+      <p className="btn save">
+      <MiButton  text ={"guardar"} icon={"***"} loading={loader} Click={handleLoaderClick}/>
+      </p>
+
+       <button  className="btn api" onClick={handleApiClick}> llama la api </button>
     </div>
   );
 }
